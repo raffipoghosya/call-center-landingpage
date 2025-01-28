@@ -206,6 +206,7 @@ button.btn-primary {
 .header-nav .logo {
   display: inline-block;
 }
+
 .header-nav ul {
   display: flex;
   justify-content: flex-end;
@@ -619,6 +620,51 @@ button.btn-primary {
 }
 .services .services-items h3 span {
   margin-right: 10px;
+}
+
+
+/* _____ style price _____ */
+.pricing-plans {
+  background: #df6f50;
+  padding: 50px 0;
+  color: white;
+}
+.pricing-card {
+  background: #777;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.pricing-card.professional {
+  background: #a5a0a0;
+}
+.pricing-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.pricing-card h4 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.pricing-card .price span {
+  font-size: 16px;
+  color: #ccc;
+}
+.pricing-card button {
+  margin: 20px 0;
+  background: #df6f50;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+.pricing-card ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 /* _____ style about _____ */

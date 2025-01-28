@@ -21,6 +21,32 @@ $(() => {
         }
     });
     new WOW().init();
+
+    // Add event listener for the contact form submission
+    let contactForm = document.querySelector("form");
+    contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    const formData = {
+        username: document.querySelector('[name="username"]').value,
+        email: document.querySelector('[name="email"]').value,
+        subject: document.querySelector('[name="subject"]').value,
+        message: document.querySelector('[name="message"]').value,
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycbz0dlpceK9tsRxJft4_G5N7dOX_hlQYjwi12DGJ137Ri542O3V4vP_rkM3QwLZeJ7OqdA/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+        mode: 'no-cors'
+    })
+        .then(response => console.log(response.ok))
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    });
+
 });
 
 let stickyTop = document.querySelector(".header-nav");
